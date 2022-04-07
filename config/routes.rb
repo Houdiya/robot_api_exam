@@ -3,5 +3,6 @@ Rails.application.routes.draw do
 
   # Defines the root path route ("/")
   # root "articles#index"
-  resources :programing_languages
+  #  resources :programing_languages
+  get 'programing_languages', to: 'programing_languages#index'
 end

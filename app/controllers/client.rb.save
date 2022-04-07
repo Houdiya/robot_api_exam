@@ -1,0 +1,17 @@
+#!/usr/bin/ruby
+
+require 'socket'
+
+host = 'localhost'
+port = 7
+
+msg =  ARGV[0] || "json"
+
+s = UDPSocket.new
+s.connect host, port
+
+s.sendmsg msg + "\n"
+puts s.recv 20
+
+s.close
+
