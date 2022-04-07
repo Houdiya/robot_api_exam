@@ -4,7 +4,7 @@ describe RobotApiClient do
     describe ".ReponseGet" do
       context "Format de donnes:json ou csv" do
         it "Resultat des donnees en json ou csv" do
-          expect(RobotApiClient.new.ReponseGet("json"))
+          expect(RobotApiClient.new.ReponseGet("csv"))
         end
       end
     end
